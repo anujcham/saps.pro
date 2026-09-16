@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FiPhone } from "react-icons/fi";
 import { BrandLogo } from "./brand-logo";
 import { HeaderScrollEffect } from "./header-scroll-effect";
 import { MobileSidebar } from "./mobile-sidebar";
@@ -53,15 +52,7 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <div className="hidden items-center gap-5 min-[1025px]:flex">
-          {/* <a
-            href="tel:+447436343619"
-            className="inline-flex items-center gap-2 text-xs font-semibold text-slate-700 transition-colors hover:text-amber-600 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-600"
-            title="Call Jai Bhola (+44 743 6343 619)"
-          >
-            <FiPhone size={13} className="text-amber-500" />
-            <span>+44 743 6343 619</span>
-          </a> */}
+        <div className="hidden items-center gap-4 min-[1025px]:flex">
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 rounded-md bg-amber-400 px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-950 shadow-sm transition-all hover:-translate-y-0.5 hover:bg-amber-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-500"
