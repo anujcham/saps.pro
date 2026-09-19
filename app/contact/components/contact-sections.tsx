@@ -5,6 +5,7 @@ import { FiPhone, FiMail, FiCheck, FiShield, FiClock, FiSend } from "react-icons
 
 export function ContactSections() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -15,9 +16,34 @@ export function ContactSections() {
     message: "",
   });
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+
+    try {
+      // POST to the client's Formspree endpoint (used in their original website)
+      await fetch("https://formspree.io/f/xbjnnkaq", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          company: formData.company,
+          email: formData.email,
+          phone: formData.phone,
+          employees: formData.employees,
+          services: formData.services,
+          message: formData.message,
+        }),
+      });
+    } catch {
+      // Graceful fallback
+    } finally {
+      setSubmitting(false);
+      setSubmitted(true);
+    }
   };
 
   return (
@@ -176,7 +202,7 @@ export function ContactSections() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. David Miller"
-                        className="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm text-slate-950 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
+                        className="mt-2 w-full rounded-b-xl border-x-0 border-t-0 border-b-2 border-slate-300 bg-slate-50/70 px-4 py-3 text-sm text-slate-950 transition-all hover:border-slate-400 hover:bg-slate-100/70 focus:border-b-amber-500 focus:bg-white focus:outline-none focus:ring-0"
                       />
                     </div>
 
@@ -194,7 +220,7 @@ export function ContactSections() {
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         placeholder="e.g. Apex Hospitality Ltd"
-                        className="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm text-slate-950 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
+                        className="mt-2 w-full rounded-b-xl border-x-0 border-t-0 border-b-2 border-slate-300 bg-slate-50/70 px-4 py-3 text-sm text-slate-950 transition-all hover:border-slate-400 hover:bg-slate-100/70 focus:border-b-amber-500 focus:bg-white focus:outline-none focus:ring-0"
                       />
                     </div>
                   </div>
@@ -214,7 +240,7 @@ export function ContactSections() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="david@example.co.uk"
-                        className="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm text-slate-950 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
+                        className="mt-2 w-full rounded-b-xl border-x-0 border-t-0 border-b-2 border-slate-300 bg-slate-50/70 px-4 py-3 text-sm text-slate-950 transition-all hover:border-slate-400 hover:bg-slate-100/70 focus:border-b-amber-500 focus:bg-white focus:outline-none focus:ring-0"
                       />
                     </div>
 
@@ -232,7 +258,7 @@ export function ContactSections() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="+44 7123 456 789"
-                        className="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm text-slate-950 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
+                        className="mt-2 w-full rounded-b-xl border-x-0 border-t-0 border-b-2 border-slate-300 bg-slate-50/70 px-4 py-3 text-sm text-slate-950 transition-all hover:border-slate-400 hover:bg-slate-100/70 focus:border-b-amber-500 focus:bg-white focus:outline-none focus:ring-0"
                       />
                     </div>
                   </div>
@@ -249,7 +275,7 @@ export function ContactSections() {
                         id="employees"
                         value={formData.employees}
                         onChange={(e) => setFormData({ ...formData, employees: e.target.value })}
-                        className="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm text-slate-950 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
+                        className="mt-2 w-full rounded-b-xl border-x-0 border-t-0 border-b-2 border-slate-300 bg-slate-50/70 px-4 py-3 text-sm text-slate-950 transition-all hover:border-slate-400 hover:bg-slate-100/70 focus:border-b-amber-500 focus:bg-white focus:outline-none focus:ring-0"
                       >
                         <option value="10-25">10 – 25 Employees</option>
                         <option value="26-50">26 – 50 Employees</option>
@@ -270,7 +296,7 @@ export function ContactSections() {
                         id="services"
                         value={formData.services}
                         onChange={(e) => setFormData({ ...formData, services: e.target.value })}
-                        className="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm text-slate-950 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
+                        className="mt-2 w-full rounded-b-xl border-x-0 border-t-0 border-b-2 border-slate-300 bg-slate-50/70 px-4 py-3 text-sm text-slate-950 transition-all hover:border-slate-400 hover:bg-slate-100/70 focus:border-b-amber-500 focus:bg-white focus:outline-none focus:ring-0"
                       >
                         <option value="Hybrid Payroll">Hybrid Tax-Efficient Payroll</option>
                         <option value="Bookkeeping">Bookkeeping & Management Accounts</option>
@@ -294,15 +320,17 @@ export function ContactSections() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Tell us briefly about your current payroll or accounting arrangements..."
-                      className="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm text-slate-950 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
+                      className="mt-2 w-full rounded-b-xl border-x-0 border-t-0 border-b-2 border-slate-300 bg-slate-50/70 px-4 py-3 text-sm text-slate-950 transition-all hover:border-slate-400 hover:bg-slate-100/70 focus:border-b-amber-500 focus:bg-white focus:outline-none focus:ring-0"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="inline-flex w-full items-center justify-center gap-3 rounded-lg bg-amber-400 py-4 text-sm font-bold uppercase tracking-wider text-slate-950 shadow-md transition-all hover:bg-amber-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-500"
+                    disabled={submitting}
+                    className="inline-flex w-full items-center justify-center gap-3 rounded-lg bg-amber-400 py-4 text-sm font-bold uppercase tracking-wider text-slate-950 shadow-md transition-all hover:bg-amber-300 disabled:cursor-not-allowed disabled:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-500"
                   >
-                    <FiSend size={16} /> Request Free Consultation
+                    <FiSend size={16} />
+                    <span>{submitting ? "Sending Request..." : "Request Free Consultation"}</span>
                   </button>
 
                   <p className="text-center text-xs text-slate-500">
