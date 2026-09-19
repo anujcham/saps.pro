@@ -57,7 +57,7 @@ export function SiteHeader() {
             className="inline-flex items-center gap-2 rounded-md bg-amber-400 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-950 shadow-sm transition-all hover:-translate-y-0.5 hover:bg-amber-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-500"
           >
             <FiLock aria-hidden="true" size={14} />
-            <span>Login</span>
+            <span>Employee Login</span>
           </a>
         </div>
         <MobileSidebar />

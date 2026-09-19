@@ -77,15 +77,20 @@ export function MobileSidebar() {
             {/* Sidebar drawer with guaranteed solid background outside any header containment */}
             <aside
               id="mobile-navigation"
-              className={`fixed right-0 top-0 bottom-0 z-50 flex h-dvh min-h-screen w-[88vw] max-w-sm flex-col border-l-4 border-amber-400 bg-[#090e0b] px-6 py-7 text-white shadow-2xl transition-transform duration-300 ease-out sm:px-7 overflow-y-auto ${
+              className={`fixed inset-y-0 right-0 z-50 flex h-full max-h-[100dvh] w-[88vw] max-w-sm flex-col border-l-4 border-amber-400 bg-[#090e0b] text-white shadow-2xl transition-transform duration-300 ease-out ${
                 isOpen ? "translate-x-0" : "translate-x-full"
               }`}
-              style={{ backgroundColor: "#090e0b" }}
+              style={{
+                backgroundColor: "#090e0b",
+                height: "100dvh",
+                maxHeight: "100dvh",
+              }}
               aria-label="Mobile navigation"
               role="dialog"
               aria-modal="true"
             >
-              <div className="flex items-start justify-between">
+              {/* Drawer Header */}
+              <div className="flex shrink-0 items-center justify-between px-6 pt-6 pb-2 sm:px-7">
                 <BrandLogo light />
                 <button
                   type="button"
@@ -97,108 +102,116 @@ export function MobileSidebar() {
                 </button>
               </div>
 
-              {/* Main Navigation Links */}
-              <nav className="mt-8" aria-label="Mobile main navigation">
-                <ul className="space-y-4">
-                  {navigation.map((item, index) => {
-                    const isActive =
-                      item.href === "/"
-                        ? normalizedPath === "/"
-                        : normalizedPath === item.href ||
-                          normalizedPath.startsWith(`${item.href}/`);
+              {/* Scrollable Middle Content (Nav Links & Direct Advisory) */}
+              <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-6 py-4 sm:px-7">
+                {/* Main Navigation Links */}
+                <nav aria-label="Mobile main navigation">
+                  <ul className="space-y-3 sm:space-y-4">
+                    {navigation.map((item, index) => {
+                      const isActive =
+                        item.href === "/"
+                          ? normalizedPath === "/"
+                          : normalizedPath === item.href ||
+                            normalizedPath.startsWith(`${item.href}/`);
 
-                    return (
-                      <li
-                        key={item.href}
-                        className={`transition-[opacity,transform] duration-300 ${
-                          isOpen ? "translate-x-0 opacity-100" : "translate-x-4 opacity-0"
-                        }`}
-                        style={{ transitionDelay: isOpen ? `${index * 60}ms` : "0ms" }}
-                      >
-                        <Link
-                          href={item.href}
-                          onClick={() => setIsOpen(false)}
-                          aria-current={isActive ? "page" : undefined}
-                          className={`flex items-center justify-between border-b pb-3 text-xl tracking-tight transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-400 ${
-                            isActive
-                              ? "border-amber-400 font-bold text-amber-400"
-                              : "border-slate-800 font-medium text-white hover:text-amber-400"
+                      return (
+                        <li
+                          key={item.href}
+                          className={`transition-[opacity,transform] duration-300 ${
+                            isOpen ? "translate-x-0 opacity-100" : "translate-x-4 opacity-0"
                           }`}
+                          style={{ transitionDelay: isOpen ? `${index * 60}ms` : "0ms" }}
                         >
-                          <span>{item.label}</span>
-                          <FiArrowUpRight
-                            aria-hidden="true"
-                            size={20}
-                            className={isActive ? "text-amber-400" : "text-slate-500"}
-                          />
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </nav>
+                          <Link
+                            href={item.href}
+                            onClick={() => setIsOpen(false)}
+                            aria-current={isActive ? "page" : undefined}
+                            className={`flex items-center justify-between border-b pb-3 text-lg sm:text-xl tracking-tight transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-400 ${
+                              isActive
+                                ? "border-amber-400 font-bold text-amber-400"
+                                : "border-slate-800 font-medium text-white hover:text-amber-400"
+                            }`}
+                          >
+                            <span>{item.label}</span>
+                            <FiArrowUpRight
+                              aria-hidden="true"
+                              size={20}
+                              className={isActive ? "text-amber-400" : "text-slate-500"}
+                            />
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </nav>
 
-              {/* Direct Advisory Click-To-Dial & Mail Section */}
-              <div className="mt-8 rounded-xl border border-slate-800 bg-slate-900/70 p-4">
-                <p className="font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-amber-400">
-                  Direct Advisory (UK)
-                </p>
+                {/* Direct Advisory Click-To-Dial & Mail Section */}
+                <div className="mt-6 rounded-xl border border-slate-800 bg-slate-900/70 p-4">
+                  <p className="font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-amber-400">
+                    Direct Advisory (UK)
+                  </p>
 
-                <div className="mt-4 space-y-3">
-                  {/* Jai Bhola */}
-                  <div>
-                    <p className="text-xs font-semibold text-slate-200">Jai Bhola</p>
-                    <div className="mt-1 flex flex-col gap-1 text-xs">
-                      <a
-                        href="tel:+447436343619"
-                        className="inline-flex items-center gap-2 text-slate-300 transition-colors hover:text-amber-400 active:text-amber-400"
-                      >
-                        <FiPhone size={13} className="shrink-0 text-amber-400" />
-                        <span>+44 743 6343 619</span>
-                      </a>
-                      <a
-                        href="mailto:ask@saps.pro"
-                        className="inline-flex items-center gap-2 text-amber-400/90 hover:underline active:text-amber-300"
-                      >
-                        <FiMail size={13} className="shrink-0" />
-                        <span>ask@saps.pro</span>
-                      </a>
+                  <div className="mt-3 space-y-3">
+                    {/* Jai Bhola */}
+                    <div>
+                      <p className="text-xs font-semibold text-slate-200">Jai Bhola</p>
+                      <div className="mt-1 flex flex-col gap-1 text-xs">
+                        <a
+                          href="tel:+447436343619"
+                          className="inline-flex items-center gap-2 text-slate-300 transition-colors hover:text-amber-400 active:text-amber-400"
+                        >
+                          <FiPhone size={13} className="shrink-0 text-amber-400" />
+                          <span>+44 743 6343 619</span>
+                        </a>
+                        <a
+                          href="mailto:ask@saps.pro"
+                          className="inline-flex items-center gap-2 text-amber-400/90 hover:underline active:text-amber-300"
+                        >
+                          <FiMail size={13} className="shrink-0" />
+                          <span>ask@saps.pro</span>
+                        </a>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="h-px bg-slate-800/80" />
+                    <div className="h-px bg-slate-800/80" />
 
-                  {/* Robert Taylor */}
-                  <div>
-                    <p className="text-xs font-semibold text-slate-200">Robert Taylor</p>
-                    <div className="mt-1 flex flex-col gap-1 text-xs">
-                      <a
-                        href="tel:+447950721126"
-                        className="inline-flex items-center gap-2 text-slate-300 transition-colors hover:text-amber-400 active:text-amber-400"
-                      >
-                        <FiPhone size={13} className="shrink-0 text-amber-400" />
-                        <span>+44 795 0721 126</span>
-                      </a>
-                      <a
-                        href="mailto:rob@saps.pro"
-                        className="inline-flex items-center gap-2 text-amber-400/90 hover:underline active:text-amber-300"
-                      >
-                        <FiMail size={13} className="shrink-0" />
-                        <span>rob@saps.pro</span>
-                      </a>
+                    {/* Robert Taylor */}
+                    <div>
+                      <p className="text-xs font-semibold text-slate-200">Robert Taylor</p>
+                      <div className="mt-1 flex flex-col gap-1 text-xs">
+                        <a
+                          href="tel:+447950721126"
+                          className="inline-flex items-center gap-2 text-slate-300 transition-colors hover:text-amber-400 active:text-amber-400"
+                        >
+                          <FiPhone size={13} className="shrink-0 text-amber-400" />
+                          <span>+44 795 0721 126</span>
+                        </a>
+                        <a
+                          href="mailto:rob@saps.pro"
+                          className="inline-flex items-center gap-2 text-amber-400/90 hover:underline active:text-amber-300"
+                        >
+                          <FiMail size={13} className="shrink-0" />
+                          <span>rob@saps.pro</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Action Button: Client Login */}
-              <div className="mt-auto pt-6">
+              {/* Action Button: Employee Login - Pinned above phone bottom bar & safe area */}
+              <div
+                className="shrink-0 border-t border-slate-800/80 bg-[#090e0b] px-6 pt-3.5 pb-8 sm:px-7"
+                style={{
+                  paddingBottom: "max(2rem, calc(env(safe-area-inset-bottom, 0px) + 1.5rem))",
+                }}
+              >
                 <a
                   href={BRIGHTHR_LOGIN_URL}
                   className="flex w-full items-center justify-center gap-2 rounded-md bg-amber-400 py-3 text-sm font-bold uppercase tracking-wider text-slate-950 shadow transition-all hover:bg-amber-300 active:scale-[0.99]"
                 >
                   <FiLock aria-hidden="true" size={15} />
-                  <span>Client Login</span>
+                  <span>Employee Login</span>
                 </a>
               </div>
             </aside>
