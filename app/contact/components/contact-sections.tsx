@@ -32,10 +32,12 @@ export function ContactSections() {
           name: formData.name,
           company: formData.company,
           email: formData.email,
+          _replyto: formData.email,
           phone: formData.phone,
           employees: formData.employees,
           services: formData.services,
           message: formData.message,
+          _subject: `New Consultation Request: ${formData.company || formData.name} (${formData.name})`,
         }),
       });
     } catch {
