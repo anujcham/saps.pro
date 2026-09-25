@@ -17,6 +17,7 @@ export function HomeReveal({ children }: { children: ReactNode }) {
         return;
       }
 
+      // Hero content entrance
       gsap.from(".hero-copy > *", {
         y: 36,
         opacity: 0,
@@ -27,19 +28,20 @@ export function HomeReveal({ children }: { children: ReactNode }) {
 
       gsap.from(".hero-visual", {
         y: 48,
-        rotate: 3,
+        rotate: 4,
         opacity: 0,
         duration: 1.1,
         delay: 0.15,
         ease: "power3.out",
       });
 
+      // Section items reveal on scroll
       gsap.utils.toArray<HTMLElement>(".reveal-section").forEach((section) => {
         const items = section.querySelectorAll<HTMLElement>(".reveal-item");
 
         gsap.fromTo(
           items,
-          { y: 70, opacity: 0 },
+          { y: 50, opacity: 0 },
           {
             y: 0,
             opacity: 1,
@@ -47,58 +49,12 @@ export function HomeReveal({ children }: { children: ReactNode }) {
             stagger: 0.12,
             scrollTrigger: {
               trigger: section,
-              start: "top 88%",
-              end: "top 42%",
+              start: "top 85%",
+              end: "top 45%",
               scrub: 1.1,
             },
           },
         );
-
-        const parallax = section.querySelector<HTMLElement>(".section-parallax");
-        if (parallax) {
-          gsap.fromTo(
-            parallax,
-            { x: () => -window.innerWidth * 0.16, yPercent: 10 },
-            {
-              x: () => window.innerWidth * 1.08,
-              yPercent: -14,
-              ease: "none",
-              scrollTrigger: {
-                trigger: section,
-                start: "top 88%",
-                end: "bottom 18%",
-                scrub: 1.2,
-              },
-            },
-          );
-        }
-
-        const sectionCircle = section.querySelector<HTMLElement>(".section-circle");
-        if (sectionCircle) {
-          gsap.fromTo(
-            sectionCircle,
-            { x: () => -window.innerWidth * 0.9 },
-            {
-              x: () => window.innerWidth * 0.9,
-              ease: "none",
-              scrollTrigger: {
-                trigger: section,
-                start: "top 92%",
-                end: "top 18%",
-                scrub: 1.4,
-              },
-            },
-          );
-        }
-      });
-
-      gsap.to(".floating-card, .floating-phone", {
-        y: -14,
-        rotate: -1.5,
-        duration: 3,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
       });
     }, root);
 

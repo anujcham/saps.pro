@@ -48,19 +48,19 @@ export function ScrollGrid() {
 
   return (
     <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-      {/* Subtle warm radial ambiance across the hero */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,rgba(245,158,11,0.12),transparent_65%)]" />
+      {/* Subtle cyan radial ambiance across the hero */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_35%,rgba(0,240,255,0.12),transparent_70%)]" />
 
-      {/* Horizon glow line positioned higher so grid covers nearly the entire hero section */}
+      {/* Electric Cyan Horizon Glow Line */}
       <div
         ref={horizon}
-        className="absolute left-1/2 top-[22%] h-px w-[140%] -translate-x-1/2 bg-amber-400/40 shadow-[0_0_28px_6px_rgba(245,158,11,0.25)]"
+        className="absolute left-1/2 top-[22%] h-px w-[140%] -translate-x-1/2 bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-[0_0_35px_8px_rgba(0,240,255,0.4)]"
       />
 
-      {/* 3D Perspective grid starting near the top to cover almost full hero section */}
+      {/* 3D Perspective Grid with Cyan Matrix Lines */}
       <div
         ref={grid}
-        className="absolute -left-[35%] top-[6%] h-[140%] w-[170%] origin-top [transform:perspective(520px)_rotateX(66deg)_rotateZ(-7deg)] [background-image:linear-gradient(rgba(245,158,11,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(245,158,11,0.18)_1px,transparent_1px)] [background-size:72px_58px] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_82%,transparent_100%)]"
+        className="absolute -left-[35%] top-[6%] h-[140%] w-[170%] origin-top [transform:perspective(520px)_rotateX(66deg)_rotateZ(-7deg)] [background-image:linear-gradient(rgba(0,240,255,0.14)_1px,transparent_1px),linear-gradient(90deg,rgba(0,240,255,0.14)_1px,transparent_1px)] [background-size:72px_58px] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_82%,transparent_100%)]"
       />
     </div>
   );

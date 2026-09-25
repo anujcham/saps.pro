@@ -16,32 +16,32 @@ import {
 const sectors = [
   {
     name: "Hospitality & Leisure",
-    desc: "Restaurants, hotels, bars & event venues with variable shifts.",
+    desc: "Restaurants, hotels, bars & event venues with variable shifts & high employee rotation.",
     icon: FiCoffee,
   },
   {
     name: "Food, Beverage & Retail",
-    desc: "Fast-moving inventory, high-volume transactions & staff rotas.",
+    desc: "Fast-moving multi-store inventory, high-volume transactions & automated rota payroll.",
     icon: FiShoppingBag,
   },
   {
     name: "Construction & Property",
-    desc: "Specialist CIS returns, subcontractors & project cashflow.",
+    desc: "Specialist CIS deduction filing, sub-contractor verifications & project cashflow management.",
     icon: FiHome,
   },
   {
     name: "Corporate & Enterprise",
-    desc: "Scalable financial oversight, audits & corporate tax planning.",
+    desc: "Scalable executive salary modeling, dividend splits, audits & corporate tax planning.",
     icon: FiBriefcase,
   },
   {
     name: "Professional Services",
-    desc: "Consultancies, legal, design & tech firms requiring precision.",
+    desc: "Consultancies, legal, design & engineering firms requiring precision fee reconciliation.",
     icon: FiAward,
   },
   {
-    name: "Owner-Managed Enterprises",
-    desc: "Hands-on founders looking to reclaim time from admin burdens.",
+    name: "Owner-Managed Scale-ups",
+    desc: "Hands-on founders looking to reclaim executive time from manual payroll calculations.",
     icon: FiUser,
   },
 ];
@@ -58,7 +58,6 @@ export function ClientsCarousel() {
     setCanScrollLeft(el.scrollLeft > 10);
     setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 10);
 
-    // Calculate approximate active slide
     const slideWidth = el.clientWidth * 0.85;
     const index = Math.round(el.scrollLeft / slideWidth);
     setActiveIndex(Math.min(Math.max(index, 0), sectors.length - 1));
@@ -102,7 +101,7 @@ export function ClientsCarousel() {
   };
 
   return (
-    <div className="relative mt-14">
+    <div className="relative mt-12 sm:mt-14">
       {/* Slider controls for mobile & tablet (< lg) */}
       <div className="mb-4 flex items-center justify-between lg:hidden">
         <span className="font-mono text-xs uppercase tracking-wider text-slate-400">
@@ -114,7 +113,7 @@ export function ClientsCarousel() {
             onClick={handlePrev}
             disabled={!canScrollLeft}
             aria-label="Previous client sector"
-            className="flex size-9 items-center justify-center rounded-full border border-slate-800 bg-slate-900 text-white transition-colors hover:border-amber-400 hover:text-amber-400 disabled:opacity-40"
+            className="flex size-9 items-center justify-center rounded-xl border border-slate-800 bg-slate-900 text-white transition-colors hover:border-cyan-400 hover:text-cyan-400 disabled:opacity-30"
           >
             <FiChevronLeft size={18} />
           </button>
@@ -123,7 +122,7 @@ export function ClientsCarousel() {
             onClick={handleNext}
             disabled={!canScrollRight}
             aria-label="Next client sector"
-            className="flex size-9 items-center justify-center rounded-full border border-slate-800 bg-slate-900 text-white transition-colors hover:border-amber-400 hover:text-amber-400 disabled:opacity-40"
+            className="flex size-9 items-center justify-center rounded-xl border border-slate-800 bg-slate-900 text-white transition-colors hover:border-cyan-400 hover:text-cyan-400 disabled:opacity-30"
           >
             <FiChevronRight size={18} />
           </button>
@@ -140,21 +139,21 @@ export function ClientsCarousel() {
           return (
             <div
               key={sector.name}
-              className="carousel-card reveal-item group flex w-[85vw] max-w-[340px] shrink-0 snap-center flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/80 p-7 shadow-lg transition-all hover:border-amber-400/60 hover:bg-slate-900 sm:w-[60vw] sm:max-w-[380px] md:w-[46vw] lg:w-auto lg:max-w-none lg:shrink lg:snap-align-none"
+              className="carousel-card reveal-item group flex w-[85vw] max-w-[340px] shrink-0 snap-center flex-col justify-between rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-slate-900/90 to-[#060a16] p-7 shadow-lg backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/50 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(0,240,255,0.12)] sm:w-[60vw] sm:max-w-[380px] md:w-[46vw] lg:w-auto lg:max-w-none lg:shrink lg:snap-align-none"
             >
               <div>
                 <div className="flex items-center justify-between">
-                  {/* Yellowish Circle with Dark Icon */}
-                  <span className="flex size-11 items-center justify-center rounded-full bg-amber-400 text-slate-950 shadow-[0_0_16px_rgba(245,158,11,0.45)] transition-transform duration-300 group-hover:scale-110">
+                  {/* Cyan / Mint Gradient Circle with Dark Icon */}
+                  <span className="flex size-11 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400 to-emerald-400 text-slate-950 shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-transform duration-300 group-hover:scale-110">
                     <Icon size={20} aria-hidden="true" />
                   </span>
 
-                  <span className="rounded bg-slate-800/80 px-2.5 py-1 font-mono text-[11px] font-semibold text-slate-300">
-                    10–150 Staff
+                  <span className="rounded-lg bg-slate-800/80 px-2.5 py-1 font-mono text-[11px] font-semibold text-cyan-300 border border-cyan-500/20">
+                    10–150+ Staff
                   </span>
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold text-white transition-colors group-hover:text-amber-300">
+                <h3 className="mt-6 text-xl font-bold text-white transition-colors group-hover:text-cyan-300">
                   {sector.name}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-400">
@@ -162,9 +161,9 @@ export function ClientsCarousel() {
                 </p>
               </div>
 
-              <div className="mt-6 flex items-center gap-2 border-t border-slate-800/80 pt-4 font-mono text-xs text-amber-400">
-                <FiCheck size={14} className="text-amber-400" />
-                <span>Full statutory compliance</span>
+              <div className="mt-6 flex items-center gap-2 border-t border-slate-800/80 pt-4 font-mono text-xs text-cyan-400">
+                <FiCheck size={14} className="text-emerald-400" />
+                <span>Full HMRC Statutory Compliance</span>
               </div>
             </div>
           );
@@ -180,7 +179,7 @@ export function ClientsCarousel() {
             onClick={() => scrollToSlide(i)}
             aria-label={`Go to slide ${i + 1}`}
             className={`h-1.5 rounded-full transition-all ${
-              activeIndex === i ? "w-6 bg-amber-400" : "w-1.5 bg-slate-700 hover:bg-slate-500"
+              activeIndex === i ? "w-6 bg-cyan-400 shadow-[0_0_8px_#00f0ff]" : "w-1.5 bg-slate-700 hover:bg-slate-500"
             }`}
           />
         ))}
@@ -188,4 +187,3 @@ export function ClientsCarousel() {
     </div>
   );
 }
-

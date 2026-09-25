@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import { SiteFooter } from "@/app/common/components/site-footer";
 import { SiteHeader } from "@/app/common/components/site-header";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const plusJakarta = Plus_Jakarta_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "SAPs.Pro | Structured. Compliant. Trusted. UK Financial Services",
-  description: "Dedicated financial management support, hybrid tax-efficient payroll, bookkeeping, and VAT returns for UK businesses with 10 to 150 employees.",
+  title: "Falcoonz PAY | Smart Payroll & Intelligent Financial Infrastructure",
+  description: "Next-generation payroll engineering, tax-efficient workforce financial management, and real-time compliance for forward-thinking enterprises.",
   icons: {
     icon: [
       { url: "/favicon.png", sizes: "32x32", type: "image/png" },
@@ -30,11 +32,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full overflow-x-hidden antialiased`}
+      className={`${plusJakarta.variable} ${jetbrainsMono.variable} h-full overflow-x-hidden antialiased`}
     >
-      <body className="flex min-h-full flex-col overflow-x-hidden bg-slate-50 text-slate-950">
+      <body className="flex min-h-full flex-col overflow-x-hidden bg-[#050811] text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200 font-sans">
         <SiteHeader />
-        <main className="flex flex-1 flex-col pt-20">{children}</main>
+        <main className="flex flex-1 flex-col pt-18 sm:pt-20">{children}</main>
         <SiteFooter />
       </body>
     </html>
