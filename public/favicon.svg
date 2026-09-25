@@ -1,0 +1,45 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#070f1e" />
+      <stop offset="100%" stopColor="#020409" />
+    </linearGradient>
+    <linearGradient id="falcon-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#00f0ff" />
+      <stop offset="100%" stopColor="#00ff9d" />
+    </linearGradient>
+    <linearGradient id="falcon-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#38bdf8" />
+      <stop offset="100%" stopColor="#0284c7" />
+    </linearGradient>
+    <filter id="neon-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Obsidian Rounded Squircle -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#bg-grad)" stroke="#00f0ff" stroke-width="2.5" stroke-opacity="0.85" />
+
+  <!-- Ambient Glow -->
+  <circle cx="32" cy="30" r="18" fill="#00f0ff" fill-opacity="0.18" filter="url(#neon-glow)" />
+
+  <!-- Geometric Falcon Chevrons -->
+  <g transform="translate(12, 12)">
+    <path
+      d="M20 5 L35 15 L28 20 L20 12 L12 20 L5 15 Z"
+      fill="url(#falcon-cyan)"
+      filter="url(#neon-glow)"
+    />
+    <path
+      d="M20 14 L32 23 L26 28 L20 20 L14 28 L8 23 Z"
+      fill="url(#falcon-dark)"
+    />
+    <path
+      d="M20 22 L27 30 L20 36 L13 30 Z"
+      fill="url(#falcon-cyan)"
+      opacity="0.95"
+    />
+  </g>
+</svg>
+

@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { ContactSections } from "./components/contact-sections";
 
 export const metadata: Metadata = {
-  title: "Contact & Free Consultation | SAPs.Pro UK",
+  title: "Enterprise Advisory & Consultation | Falcoonz PAY",
   description:
-    "Book a free, no-obligation consultation with SAPs.Pro. Speak directly with Jai Bhola (+44 743 6343 619) or Robert Taylor (+44 795 0721 126).",
+    "Schedule a direct financial architecture and payroll audit with Falcoonz PAY UK senior advisors. Direct lines: +44 743 6343 619 / +44 795 0721 126.",
 };
 
 export default function ContactPage() {
   return <ContactSections />;
 }
+
 
