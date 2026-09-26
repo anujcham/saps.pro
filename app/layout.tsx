@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import { ScrollToTop } from "@/app/common/components/scroll-to-top";
 import { SiteFooter } from "@/app/common/components/site-footer";
 import { SiteHeader } from "@/app/common/components/site-header";
 import "./globals.css";
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SiteHeader />
         <main className="flex flex-1 flex-col pt-18 sm:pt-20">{children}</main>
         <SiteFooter />
+        <ScrollToTop />
       </body>
     </html>
   );
