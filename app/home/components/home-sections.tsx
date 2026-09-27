@@ -190,7 +190,7 @@ export function HomeSections() {
 
                 {/* Footer status line */}
                 <div className="mt-5 flex items-center justify-between border-t border-slate-800 pt-3 text-[11px] text-slate-400">
-                  <span>Advisory: Jai Bhola & Robert Taylor</span>
+                  <span>Advisory: Jai Bhola, Robert Taylor & Shahrukh Khan</span>
                   <span className="font-mono text-amber-400">UK Registered</span>
                 </div>
               </div>
@@ -557,8 +557,8 @@ export function HomeSections() {
               </p>
             </div>
 
-            {/* Direct Contact Cards (Jai Bhola & Robert Taylor) */}
-            <div className="mt-14 grid gap-8 md:grid-cols-2">
+            {/* Direct Contact Cards (Jai Bhola, Robert Taylor & Shahrukh Khan) */}
+            <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {/* Jai Bhola */}
               <div className="reveal-item rounded-2xl border border-slate-800 bg-slate-900/90 p-8 sm:p-10 shadow-lg">
                 <div className="h-1 w-16 bg-amber-400" />
@@ -617,6 +617,37 @@ export function HomeSections() {
                       <FiMail size={18} />
                     </div>
                     rob@saps.pro
+                  </a>
+                </div>
+              </div>
+
+              {/* Shahrukh Khan */}
+              <div className="reveal-item rounded-2xl border border-slate-800 bg-slate-900/90 p-8 sm:p-10 shadow-lg">
+                <div className="h-1 w-16 bg-amber-400" />
+                <h3 className="mt-6 text-3xl font-semibold text-white">Shahrukh Khan</h3>
+                <p className="mt-1 font-mono text-xs font-bold uppercase tracking-wider text-slate-400">
+                  Senior Advisor & Specialist
+                </p>
+
+                <div className="mt-8 space-y-4">
+                  <a
+                    href="tel:+447747212437"
+                    className="flex items-center gap-4 text-lg font-medium text-slate-200 transition-colors hover:text-amber-400"
+                  >
+                    <div className="flex size-10 items-center justify-center rounded-lg bg-slate-800 text-amber-400">
+                      <FiPhone size={18} />
+                    </div>
+                    +44 7747 212 437
+                  </a>
+
+                  <a
+                    href="mailto:Shahrukh@saps.pro"
+                    className="flex items-center gap-4 text-lg font-medium text-amber-400 transition-colors hover:underline"
+                  >
+                    <div className="flex size-10 items-center justify-center rounded-lg bg-slate-800 text-amber-400">
+                      <FiMail size={18} />
+                    </div>
+                    Shahrukh@saps.pro
                   </a>
                 </div>
               </div>

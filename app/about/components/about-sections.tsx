@@ -20,7 +20,7 @@ const principles = [
     number: "03",
     icon: FiUsers,
     title: "Trusted Senior Advisors",
-    text: "Direct, personal access to dedicated UK financial directors — Jai Bhola and Robert Taylor — ready with real-time strategic counsel.",
+    text: "Direct, personal access to dedicated UK financial directors — Jai Bhola, Robert Taylor, and Shahrukh Khan — ready with real-time strategic counsel.",
   },
 ];
 

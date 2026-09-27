@@ -240,7 +240,7 @@ export function ServicesSections() {
               Ready to streamline your financial operations?
             </h2>
             <p className="mt-2 text-base text-slate-800">
-              Speak directly with Jai Bhola or Robert Taylor for a zero-obligation review.
+              Speak directly with Jai Bhola, Robert Taylor, or Shahrukh Khan for a zero-obligation review.
             </p>
           </div>
           <Link

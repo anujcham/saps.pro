@@ -88,6 +88,21 @@ export function SiteFooter() {
                   <FiMail size={13} /> rob@saps.pro
                 </a>
               </div>
+              <div>
+                <p className="font-semibold text-white">Shahrukh Khan</p>
+                <a
+                  href="tel:+447747212437"
+                  className="mt-0.5 flex items-center gap-2 text-xs text-slate-400 hover:text-amber-400"
+                >
+                  <FiPhone size={13} className="text-amber-400" /> +44 7747 212 437
+                </a>
+                <a
+                  href="mailto:Shahrukh@saps.pro"
+                  className="mt-0.5 flex items-center gap-2 text-xs text-amber-400/90 hover:underline"
+                >
+                  <FiMail size={13} /> Shahrukh@saps.pro
+                </a>
+              </div>
             </div>
           </div>
 

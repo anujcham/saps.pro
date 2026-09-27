@@ -195,6 +195,29 @@ export function MobileSidebar() {
                         </a>
                       </div>
                     </div>
+
+                    <div className="h-px bg-slate-800/80" />
+
+                    {/* Shahrukh Khan */}
+                    <div>
+                      <p className="text-xs font-semibold text-slate-200">Shahrukh Khan</p>
+                      <div className="mt-1 flex flex-col gap-1 text-xs">
+                        <a
+                          href="tel:+447747212437"
+                          className="inline-flex items-center gap-2 text-slate-300 transition-colors hover:text-amber-400 active:text-amber-400"
+                        >
+                          <FiPhone size={13} className="shrink-0 text-amber-400" />
+                          <span>+44 7747 212 437</span>
+                        </a>
+                        <a
+                          href="mailto:Shahrukh@saps.pro"
+                          className="inline-flex items-center gap-2 text-amber-400/90 hover:underline active:text-amber-300"
+                        >
+                          <FiMail size={13} className="shrink-0" />
+                          <span>Shahrukh@saps.pro</span>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

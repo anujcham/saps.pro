@@ -80,80 +80,122 @@ export function ContactSections() {
                 You won&apos;t be routed to an overseas call center. You will consult directly with our principal specialists.
               </p>
 
-              <div className="mt-10 space-y-6">
+              <div className="mt-8 space-y-4">
                 {/* Jai Bhola */}
-                <div className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-all hover:border-amber-400">
-                  <div className="h-1 w-12 bg-amber-400" />
-                  <h3 className="mt-4 text-2xl font-bold text-slate-950">Jai Bhola</h3>
-                  <p className="mt-0.5 font-mono text-xs font-semibold uppercase tracking-wider text-slate-500">
-                    Senior Financial Specialist
-                  </p>
+                <div className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm transition-all hover:border-amber-400">
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                      <div className="h-1 w-10 bg-amber-400" />
+                      <h3 className="mt-2 text-xl font-bold text-slate-950">Jai Bhola</h3>
+                      <p className="mt-0.5 font-mono text-[11px] font-semibold uppercase tracking-wider text-slate-500">
+                        Senior Financial Specialist
+                      </p>
+                    </div>
 
-                  <div className="mt-6 space-y-3">
-                    <a
-                      href="tel:+447436343619"
-                      className="flex items-center gap-3 text-base font-medium text-slate-800 transition-colors hover:text-amber-600"
-                    >
-                      <div className="flex size-9 items-center justify-center rounded-lg bg-amber-100 text-amber-600">
-                        <FiPhone size={16} />
-                      </div>
-                      +44 743 6343 619
-                    </a>
-                    <a
-                      href="mailto:ask@saps.pro"
-                      className="flex items-center gap-3 text-base font-medium text-amber-600 transition-colors hover:underline"
-                    >
-                      <div className="flex size-9 items-center justify-center rounded-lg bg-amber-100 text-amber-600">
-                        <FiMail size={16} />
-                      </div>
-                      ask@saps.pro
-                    </a>
+                    <div className="flex flex-wrap items-center gap-3 sm:gap-5">
+                      <a
+                        href="tel:+447436343619"
+                        className="flex items-center gap-2.5 text-sm font-medium text-slate-800 transition-colors hover:text-amber-600 shrink-0"
+                      >
+                        <div className="flex size-8 items-center justify-center rounded-lg bg-amber-100 text-amber-600 shrink-0">
+                          <FiPhone size={14} />
+                        </div>
+                        <span>+44 743 6343 619</span>
+                      </a>
+                      <a
+                        href="mailto:ask@saps.pro"
+                        className="flex items-center gap-2.5 text-sm font-medium text-amber-600 transition-colors hover:underline shrink-0"
+                      >
+                        <div className="flex size-8 items-center justify-center rounded-lg bg-amber-100 text-amber-600 shrink-0">
+                          <FiMail size={14} />
+                        </div>
+                        <span>ask@saps.pro</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
 
                 {/* Robert Taylor */}
-                <div className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-all hover:border-amber-400">
-                  <div className="h-1 w-12 bg-amber-400" />
-                  <h3 className="mt-4 text-2xl font-bold text-slate-950">Robert Taylor</h3>
-                  <p className="mt-0.5 font-mono text-xs font-semibold uppercase tracking-wider text-slate-500">
-                    Senior Financial Specialist
-                  </p>
+                <div className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm transition-all hover:border-amber-400">
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                      <div className="h-1 w-10 bg-amber-400" />
+                      <h3 className="mt-2 text-xl font-bold text-slate-950">Robert Taylor</h3>
+                      <p className="mt-0.5 font-mono text-[11px] font-semibold uppercase tracking-wider text-slate-500">
+                        Senior Financial Specialist
+                      </p>
+                    </div>
 
-                  <div className="mt-6 space-y-3">
-                    <a
-                      href="tel:+447950721126"
-                      className="flex items-center gap-3 text-base font-medium text-slate-800 transition-colors hover:text-amber-600"
-                    >
-                      <div className="flex size-9 items-center justify-center rounded-lg bg-amber-100 text-amber-600">
-                        <FiPhone size={16} />
-                      </div>
-                      +44 795 0721 126
-                    </a>
-                    <a
-                      href="mailto:rob@saps.pro"
-                      className="flex items-center gap-3 text-base font-medium text-amber-600 transition-colors hover:underline"
-                    >
-                      <div className="flex size-9 items-center justify-center rounded-lg bg-amber-100 text-amber-600">
-                        <FiMail size={16} />
-                      </div>
-                      rob@saps.pro
-                    </a>
+                    <div className="flex flex-wrap items-center gap-3 sm:gap-5">
+                      <a
+                        href="tel:+447950721126"
+                        className="flex items-center gap-2.5 text-sm font-medium text-slate-800 transition-colors hover:text-amber-600 shrink-0"
+                      >
+                        <div className="flex size-8 items-center justify-center rounded-lg bg-amber-100 text-amber-600 shrink-0">
+                          <FiPhone size={14} />
+                        </div>
+                        <span>+44 795 0721 126</span>
+                      </a>
+                      <a
+                        href="mailto:rob@saps.pro"
+                        className="flex items-center gap-2.5 text-sm font-medium text-amber-600 transition-colors hover:underline shrink-0"
+                      >
+                        <div className="flex size-8 items-center justify-center rounded-lg bg-amber-100 text-amber-600 shrink-0">
+                          <FiMail size={14} />
+                        </div>
+                        <span>rob@saps.pro</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Shahrukh Khan */}
+                <div className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm transition-all hover:border-amber-400">
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                      <div className="h-1 w-10 bg-amber-400" />
+                      <h3 className="mt-2 text-xl font-bold text-slate-950">Shahrukh Khan</h3>
+                      <p className="mt-0.5 font-mono text-[11px] font-semibold uppercase tracking-wider text-slate-500">
+                        Senior Financial Specialist
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-3 sm:gap-5">
+                      <a
+                        href="tel:+447747212437"
+                        className="flex items-center gap-2.5 text-sm font-medium text-slate-800 transition-colors hover:text-amber-600 shrink-0"
+                      >
+                        <div className="flex size-8 items-center justify-center rounded-lg bg-amber-100 text-amber-600 shrink-0">
+                          <FiPhone size={14} />
+                        </div>
+                        <span>+44 7747 212 437</span>
+                      </a>
+                      <a
+                        href="mailto:Shahrukh@saps.pro"
+                        className="flex items-center gap-2.5 text-sm font-medium text-amber-600 transition-colors hover:underline shrink-0"
+                      >
+                        <div className="flex size-8 items-center justify-center rounded-lg bg-amber-100 text-amber-600 shrink-0">
+                          <FiMail size={14} />
+                        </div>
+                        <span>Shahrukh@saps.pro</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Badges */}
-              <div className="mt-8 flex flex-wrap gap-4 rounded-xl bg-slate-900 p-5 text-white">
-                <div className="flex items-center gap-2 font-mono text-xs text-amber-400">
-                  <FiShield size={16} />
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 rounded-xl bg-slate-900 p-4 text-center text-white">
+                <div className="flex items-center justify-center gap-2 font-mono text-xs text-amber-400">
+                  <FiShield size={15} />
                   <span>100% HMRC Compliant</span>
                 </div>
-                <div className="flex items-center gap-2 font-mono text-xs text-amber-400">
-                  <FiClock size={16} />
+                <div className="flex items-center justify-center gap-2 sm:border-x sm:border-slate-800 font-mono text-xs text-amber-400">
+                  <FiClock size={15} />
                   <span>24/7 Advisory</span>
                 </div>
-                <div className="flex items-center gap-2 font-mono text-xs text-slate-300">
-                  <FiCheck size={16} />
+                <div className="flex items-center justify-center gap-2 font-mono text-xs text-slate-300">
+                  <FiCheck size={15} />
                   <span>UK Registered</span>
                 </div>
               </div>
@@ -177,7 +219,7 @@ export function ContactSections() {
                     Consultation Request Received
                   </h4>
                   <p className="mt-2 text-sm text-slate-600">
-                    Thank you, {formData.name}. Either Jai Bhola or Robert Taylor will contact you within 24 business hours to review your structure.
+                    Thank you, {formData.name}. Either Jai Bhola, Robert Taylor, or Shahrukh Khan will contact you within 24 business hours to review your structure.
                   </p>
                   <button
                     type="button"
