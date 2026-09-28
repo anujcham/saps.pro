@@ -89,20 +89,20 @@ export function ContactSections() {
                   DIRECT ACCESS
                 </p>
                 <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                  Speak directly with senior directors
+                  Speak directly with our senior director
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-slate-400">
-                  No automated ticket queues or offshore call centers. You consult directly with our principal UK financial specialists.
+                  No automated ticket queues or offshore call centers. You consult directly with our principal UK financial specialist.
                 </p>
               </div>
 
-              {/* Jai Bhola Desk */}
+              {/* VELI Desk */}
               <div className="rounded-2xl border border-cyan-500/25 bg-gradient-to-b from-[#081224] to-[#040914] p-7 backdrop-blur-xl shadow-xl transition-all hover:border-cyan-400/50">
                 <div className="flex items-center justify-between border-b border-cyan-500/15 pb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-white">Jai Bhola</h3>
+                    <h3 className="text-xl font-bold text-white">VELI</h3>
                     <p className="font-mono text-xs font-semibold uppercase text-cyan-400 mt-0.5">
-                      Senior Financial Specialist
+                      Senior Financial Specialist &amp; Advisory Desk
                     </p>
                   </div>
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[10px] font-bold text-emerald-300">
@@ -111,61 +111,24 @@ export function ContactSections() {
                   </span>
                 </div>
 
-                <div className="mt-5 space-y-3">
+                <div className="mt-5 space-y-3.5">
                   <a
-                    href="tel:+447436343619"
-                    className="flex items-center gap-3 text-sm font-medium text-slate-300 transition-colors hover:text-cyan-300"
+                    href="tel:+447739569783"
+                    className="flex items-center gap-3 text-sm font-semibold text-slate-200 transition-colors hover:text-cyan-300"
                   >
-                    <div className="flex size-9 items-center justify-center rounded-xl bg-cyan-500/10 border border-cyan-400/30 text-cyan-400">
-                      <FiPhone size={15} />
+                    <div className="flex size-10 items-center justify-center rounded-xl bg-cyan-500/10 border border-cyan-400/30 text-cyan-400">
+                      <FiPhone size={16} />
                     </div>
-                    +44 743 6343 619
+                    <span>+44 7739 569783</span>
                   </a>
                   <a
-                    href="mailto:ask@saps.pro"
-                    className="flex items-center gap-3 text-sm font-medium text-slate-300 transition-colors hover:text-cyan-300"
+                    href="mailto:Info@falcoonzpay.co.uk"
+                    className="flex items-center gap-3 text-sm font-semibold text-cyan-400 transition-colors hover:underline hover:text-cyan-300"
                   >
-                    <div className="flex size-9 items-center justify-center rounded-xl bg-cyan-500/10 border border-cyan-400/30 text-cyan-400">
-                      <FiMail size={15} />
+                    <div className="flex size-10 items-center justify-center rounded-xl bg-cyan-500/10 border border-cyan-400/30 text-cyan-400">
+                      <FiMail size={16} />
                     </div>
-                    ask@saps.pro
-                  </a>
-                </div>
-              </div>
-
-              {/* Robert Taylor Desk */}
-              <div className="rounded-2xl border border-cyan-500/25 bg-gradient-to-b from-[#081224] to-[#040914] p-7 backdrop-blur-xl shadow-xl transition-all hover:border-cyan-400/50">
-                <div className="flex items-center justify-between border-b border-cyan-500/15 pb-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-white">Robert Taylor</h3>
-                    <p className="font-mono text-xs font-semibold uppercase text-emerald-400 mt-0.5">
-                      Senior Financial Specialist
-                    </p>
-                  </div>
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[10px] font-bold text-emerald-300">
-                    <span className="size-1.5 rounded-full bg-emerald-400 animate-ping" />
-                    ONLINE
-                  </span>
-                </div>
-
-                <div className="mt-5 space-y-3">
-                  <a
-                    href="tel:+447950721126"
-                    className="flex items-center gap-3 text-sm font-medium text-slate-300 transition-colors hover:text-emerald-300"
-                  >
-                    <div className="flex size-9 items-center justify-center rounded-xl bg-emerald-500/10 border border-emerald-400/30 text-emerald-400">
-                      <FiPhone size={15} />
-                    </div>
-                    +44 795 0721 126
-                  </a>
-                  <a
-                    href="mailto:rob@saps.pro"
-                    className="flex items-center gap-3 text-sm font-medium text-slate-300 transition-colors hover:text-emerald-300"
-                  >
-                    <div className="flex size-9 items-center justify-center rounded-xl bg-emerald-500/10 border border-emerald-400/30 text-emerald-400">
-                      <FiMail size={15} />
-                    </div>
-                    rob@saps.pro
+                    <span>Info@falcoonzpay.co.uk</span>
                   </a>
                 </div>
               </div>
@@ -212,7 +175,7 @@ export function ContactSections() {
                     Consultation Request Transmitted
                   </h4>
                   <p className="mt-3 text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
-                    Thank you, <span className="font-bold text-cyan-300">{formData.name}</span>. Either Jai Bhola or Robert Taylor will contact you within 24 business hours to conduct your structural review.
+                    Thank you, <span className="font-bold text-cyan-300">{formData.name}</span>. VELI will contact you within 24 business hours to conduct your structural review.
                   </p>
                   <button
                     type="button"

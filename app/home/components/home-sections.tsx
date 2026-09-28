@@ -531,67 +531,54 @@ export function HomeSections() {
                 </div>
               </div>
 
-              {/* Right Column: Contact Cards Stacked Vertically (Up / Down) */}
-              <div className="reveal-item flex flex-col gap-6">
-                {/* Enterprise Onboarding Desk */}
-                <div className="group rounded-2xl border border-cyan-500/20 bg-slate-900/60 p-7 backdrop-blur-md transition-all duration-300 hover:border-cyan-400/60 hover:bg-slate-900/80 hover:shadow-[0_0_30px_rgba(0,240,255,0.15)] sm:p-8">
-                  <div className="h-1 w-16 rounded-full bg-gradient-to-r from-cyan-400 to-teal-300 group-hover:w-24 transition-all duration-300" />
-                  <h3 className="mt-5 text-2xl font-bold text-white sm:text-3xl">Enterprise Onboarding Desk</h3>
-                  <p className="mt-1 font-mono text-xs font-bold uppercase tracking-wider text-cyan-300">
-                    New Client Architecture &amp; Migration
-                  </p>
+              {/* Right Column: Single Contact Card */}
+              <div className="reveal-item flex flex-col justify-center">
+                <div className="group rounded-2xl border border-cyan-500/25 bg-gradient-to-b from-[#081224] to-[#040914] p-8 sm:p-10 backdrop-blur-xl shadow-2xl transition-all duration-300 hover:border-cyan-400/60 hover:shadow-[0_0_35px_rgba(0,240,255,0.2)]">
+                  <div className="flex items-center justify-between border-b border-cyan-500/15 pb-5">
+                    <div>
+                      <div className="h-1 w-16 rounded-full bg-gradient-to-r from-cyan-400 to-teal-300 group-hover:w-24 transition-all duration-300 mb-4" />
+                      <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">VELI</h3>
+                      <p className="mt-1 font-mono text-xs font-bold uppercase tracking-wider text-cyan-400">
+                        Senior Financial Specialist &amp; Advisory Desk
+                      </p>
+                    </div>
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 font-mono text-[11px] font-bold text-emerald-300">
+                      <span className="size-2 rounded-full bg-emerald-400 animate-ping" />
+                      ONLINE
+                    </span>
+                  </div>
 
-                  <div className="mt-6 space-y-3.5">
+                  <div className="mt-8 space-y-4">
                     <a
-                      href="tel:+442080000000"
-                      className="flex items-center gap-4 text-base font-medium text-slate-200 transition-colors hover:text-cyan-300 sm:text-lg"
+                      href="tel:+447739569783"
+                      className="flex items-center gap-4 text-base sm:text-lg font-semibold text-slate-200 transition-colors hover:text-cyan-300"
                     >
-                      <div className="flex size-10 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-500/10 text-cyan-400">
+                      <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-500/10 text-cyan-400">
                         <FiPhone size={18} />
                       </div>
-                      +44 (0) 20 8000 0000
+                      +44 7739 569783
                     </a>
 
                     <a
-                      href="mailto:enterprise@falcoonzpay.com"
-                      className="flex items-center gap-4 text-base font-medium text-cyan-400 transition-colors hover:underline sm:text-lg"
+                      href="mailto:Info@falcoonzpay.co.uk"
+                      className="flex items-center gap-4 text-base sm:text-lg font-semibold text-cyan-400 transition-colors hover:underline sm:text-lg"
                     >
-                      <div className="flex size-10 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-500/10 text-cyan-400">
+                      <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-500/10 text-cyan-400">
                         <FiMail size={18} />
                       </div>
-                      enterprise@falcoonzpay.com
+                      Info@falcoonzpay.co.uk
                     </a>
                   </div>
-                </div>
 
-                {/* Client Advisory Desk */}
-                <div className="group rounded-2xl border border-cyan-500/20 bg-slate-900/60 p-7 backdrop-blur-md transition-all duration-300 hover:border-cyan-400/60 hover:bg-slate-900/80 hover:shadow-[0_0_30px_rgba(0,240,255,0.15)] sm:p-8">
-                  <div className="h-1 w-16 rounded-full bg-gradient-to-r from-teal-300 to-emerald-400 group-hover:w-24 transition-all duration-300" />
-                  <h3 className="mt-5 text-2xl font-bold text-white sm:text-3xl">Client Advisory Desk</h3>
-                  <p className="mt-1 font-mono text-xs font-bold uppercase tracking-wider text-teal-300">
-                    Technical Compliance &amp; Specialist Support
-                  </p>
-
-                  <div className="mt-6 space-y-3.5">
-                    <a
-                      href="tel:+442080000001"
-                      className="flex items-center gap-4 text-base font-medium text-slate-200 transition-colors hover:text-cyan-300 sm:text-lg"
-                    >
-                      <div className="flex size-10 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-500/10 text-cyan-400">
-                        <FiPhone size={18} />
-                      </div>
-                      +44 (0) 20 8000 0001
-                    </a>
-
-                    <a
-                      href="mailto:support@falcoonzpay.com"
-                      className="flex items-center gap-4 text-base font-medium text-cyan-400 transition-colors hover:underline sm:text-lg"
-                    >
-                      <div className="flex size-10 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-500/10 text-cyan-400">
-                        <FiMail size={18} />
-                      </div>
-                      support@falcoonzpay.com
-                    </a>
+                  <div className="mt-8 grid grid-cols-2 gap-4 border-t border-cyan-500/15 pt-6 font-mono text-xs text-slate-400">
+                    <div className="flex items-center gap-2">
+                      <span className="size-1.5 rounded-full bg-cyan-400" />
+                      Direct UK Line
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="size-1.5 rounded-full bg-emerald-400" />
+                      24/7 Advisory
+                    </div>
                   </div>
                 </div>
               </div>

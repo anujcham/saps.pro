@@ -55,37 +55,23 @@ export function SiteFooter() {
           {/* Direct Contacts Col */}
           <div>
             <h3 className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
-              Enterprise Desks
+              Direct Contact
             </h3>
             <div className="mt-4 space-y-4 text-sm">
               <div>
-                <p className="font-semibold text-white">Enterprise Onboarding</p>
+                <p className="font-semibold text-white">VELI</p>
+                <p className="font-mono text-xs text-cyan-400/80">Senior Financial Specialist</p>
                 <a
-                  href="tel:+442080000000"
-                  className="mt-0.5 flex items-center gap-2 text-xs text-slate-400 hover:text-cyan-300"
+                  href="tel:+447739569783"
+                  className="mt-1.5 flex items-center gap-2 text-xs text-slate-300 hover:text-cyan-300"
                 >
-                  <FiPhone size={13} className="text-cyan-400" /> +44 (0) 20 8000 0000
+                  <FiPhone size={13} className="text-cyan-400" /> +44 7739 569783
                 </a>
                 <a
-                  href="mailto:enterprise@falcoonzpay.com"
-                  className="mt-0.5 flex items-center gap-2 text-xs text-cyan-400/90 hover:underline"
+                  href="mailto:Info@falcoonzpay.co.uk"
+                  className="mt-1 flex items-center gap-2 text-xs text-cyan-400/90 hover:underline"
                 >
-                  <FiMail size={13} /> enterprise@falcoonzpay.com
-                </a>
-              </div>
-              <div>
-                <p className="font-semibold text-white">Client Advisory Desk</p>
-                <a
-                  href="tel:+442080000001"
-                  className="mt-0.5 flex items-center gap-2 text-xs text-slate-400 hover:text-cyan-300"
-                >
-                  <FiPhone size={13} className="text-cyan-400" /> +44 (0) 20 8000 0001
-                </a>
-                <a
-                  href="mailto:support@falcoonzpay.com"
-                  className="mt-0.5 flex items-center gap-2 text-xs text-cyan-400/90 hover:underline"
-                >
-                  <FiMail size={13} /> support@falcoonzpay.com
+                  <FiMail size={13} /> Info@falcoonzpay.co.uk
                 </a>
               </div>
             </div>

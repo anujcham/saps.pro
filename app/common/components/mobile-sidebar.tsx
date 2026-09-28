@@ -153,21 +153,22 @@ export function MobileSidebar() {
 
                   <div className="mt-3 space-y-3">
                     <div>
-                      <p className="text-xs font-semibold text-slate-200">UK Financial Advisory</p>
-                      <div className="mt-1 flex flex-col gap-1.5 text-xs">
+                      <p className="text-xs font-semibold text-white">VELI</p>
+                      <p className="font-mono text-[10px] text-cyan-400/80">Senior Financial Specialist</p>
+                      <div className="mt-1.5 flex flex-col gap-1.5 text-xs">
                         <a
-                          href="tel:+442080000000"
+                          href="tel:+447739569783"
                           className="inline-flex items-center gap-2 text-slate-300 transition-colors hover:text-cyan-400 active:text-cyan-400"
                         >
                           <FiPhone size={13} className="shrink-0 text-cyan-400" />
-                          <span>+44 (0) 20 8000 0000</span>
+                          <span>+44 7739 569783</span>
                         </a>
                         <a
-                          href="mailto:support@falcoonzpay.com"
+                          href="mailto:Info@falcoonzpay.co.uk"
                           className="inline-flex items-center gap-2 text-cyan-400/90 hover:underline active:text-cyan-300"
                         >
                           <FiMail size={13} className="shrink-0" />
-                          <span>support@falcoonzpay.com</span>
+                          <span>Info@falcoonzpay.co.uk</span>
                         </a>
                       </div>
                     </div>
